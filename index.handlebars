@@ -1,0 +1,71 @@
+<style>
+.abstract:link, .abstract:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 12px 43px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    bottom: 8px;
+}
+
+
+.abstract:hover, .abstract:active {
+    background-color: #343A40;
+}
+.brandLink {
+    background-color: #f44336;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  padding: 7px 8px;
+  position: relative;
+
+}
+
+.brandLink:hover {
+  background-color: #ce0606;
+  cursor: pointer;
+}
+
+.brandLink:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+</style>
+
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-3 mt-3 pt-5">
+                Web Development Thesis
+            </h1>
+            <p class="lead">Learn Progressive Web Development</p>
+            
+            <form action="/abstract" method="GET">
+            <a href="/abstract" class="abstract" >Read Abstract</a>
+            </form>
+            <form action="/charge" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="{{stripePublishableKey}}"
+    data-amount="2500"
+    data-name="PWA Thesis"
+    data-description="Research done by Neel Gajjar"
+    data-image="/img/logo2.png"
+    data-locale="auto">
+    
+  </script>
+  <script>
+      document.getElementsByClassName('stripe-button-el')[0].style.display='none';
+  </script>
+  <button type="submit" class="btn btn-outline-dark text-white btn-lg ">Purchase For $25</button>
+</form>
+        </div>
+        <div class="col-md-6">
+            <img src="/img/book3.png" alt="" class="img-fluid">
+        </div>
+    </div>
+</section>
